@@ -20,16 +20,34 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 2,
+    growEditionSizeTo: 10,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
-    ]
+      { name: "Skin" },
+      { name: "Eyes" },
+      { name: "Clothes" },
+      { name: "Head Accessory" },
+      { name: "Bling" },
+    ],
+    layerItemsMaxRepeatedTraits: [
+      { name: "Background/Yellow", layerItemMaxRepeatedTrait: 6 },
+      { name: "Background/Ash", layerItemMaxRepeatedTrait: 4 },
+      { name: "Clothes/Jacket", layerItemMaxRepeatedTrait: 7 },
+      { name: "Clothes/Sweater", layerItemMaxRepeatedTrait: 3 },
+      { name: "Eyes/Narrow", layerItemMaxRepeatedTrait: 8 },
+      { name: "Eyes/Open", layerItemMaxRepeatedTrait: 2 },
+      { name: "Head Accessory/Hat", layerItemMaxRepeatedTrait: 6 },
+      { name: "Head Accessory/Cap", layerItemMaxRepeatedTrait: 4 },
+    ],
+
+    // incompatibleTraits: {
+    //   "Clothes/Sweater": ["Head Accessory/Hat"],
+    //   "Clothes/Jacket": ["Head Accessory/Cap"],
+    // },
+
+    // dependentTraits: {
+    //   "Clothes/Sweater": ["Bling/Gold", "Background/Yellow"],
+    // },
   },
 ];
 
